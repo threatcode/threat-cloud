@@ -140,6 +140,27 @@ ReleaseEnum = enum.Enum(  # type:ignore
             'fai_classes': ('SID', 'EXTRAS'),
             'arch_supports_linux_image_cloud': ('amd64', 'arm64',),
         },
+        'kali-rolling': {
+            'basename': 'kali-rolling',
+            'id': 'kali-rolling',
+            'baseid': 'kali-rolling',
+            'fai_classes': ('KALI', 'KALI_ROLLING', ),
+            'arch_supports_linux_image_cloud': ('amd64', 'arm64',),
+        },
+        'kali-last-snapshot': {
+            'basename': 'kali-last-snapshot',
+            'id': 'kali-last-snapshot',
+            'baseid': 'kali-last-snapshot',
+            'fai_classes': ('KALI', 'KALI_LAST_SNAPSHOT', ),
+            'arch_supports_linux_image_cloud': ('amd64', 'arm64',),
+        },
+        'kali-dev': {
+            'basename': 'kali-dev',
+            'id': 'kali-dev',
+            'baseid': 'kali-dev',
+            'fai_classes': ('KALI', 'KALI_DEV', ),
+            'arch_supports_linux_image_cloud': ('amd64', 'arm64',),
+        },
     },
     type=Release,
 )
@@ -155,12 +176,12 @@ VendorEnum = enum.Enum(  # type:ignore
             'use_linux_image_cloud': True,
         },
         'ec2': {
-            'fai_size': '8G',
+            'fai_size': '12G',
             'fai_classes': ('EC2', 'IPV6_DHCP'),
             'use_linux_image_cloud': True,
         },
         'gce': {
-            'fai_size': '10G',
+            'fai_size': '12G',
             'fai_classes': ('GCE', ),
             'use_linux_image_cloud': True,
         },
