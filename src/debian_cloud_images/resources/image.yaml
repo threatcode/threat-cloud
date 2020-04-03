@@ -51,6 +51,24 @@ releases:
   baseid: sid
   fai_classes: [SID, EXTRAS]
   arch_supports_linux_image_cloud: [amd64, arm64]
+- name: kali-rolling
+  basename: kali-rolling
+  id: kali-rolling
+  baseid: kali-rolling
+  fai_classes: [KALI, KALI_ROLLING]
+  arch_supports_linux_image_cloud: [amd64, arm64]
+- name: kali-last-snapshot
+  basename: kali-last-snapshot
+  id: kali-last-snapshot
+  baseid: kali-last-snapshot
+  fai_classes: [KALI, KALI_LAST_SNAPSHOT]
+  arch_supports_linux_image_cloud: [amd64, arm64]
+- name: kali-dev
+  basename: kali-dev
+  id: kali-dev
+  baseid: kali-dev
+  fai_classes: [KALI, KALI_DEV]
+  arch_supports_linux_image_cloud: [amd64, arm64]
 
 vendors:
 - name: azure

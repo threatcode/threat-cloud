@@ -1,0 +1,2 @@
+apt_cdn=http://kali.download
+FAI_DEBOOTSTRAP_OPTS="${FAI_DEBOOTSTRAP_OPTS} --include=kali-archive-keyring"
