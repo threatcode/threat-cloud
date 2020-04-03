@@ -119,6 +119,12 @@ ReleaseEnum = enum.Enum(  # type:ignore
             'fai_classes': ('SID', 'EXTRAS'),
             'arch_supports_linux_image_cloud': ('amd64',),
         },
+        'kali-rolling': {
+            'id': 'kali-rolling',
+            'baseid': 'kali-rolling',
+            'fai_classes': ('KALI', 'KALI_ROLLING', ),
+            'arch_supports_linux_image_cloud': ('amd64',),
+        },
     },
     type=Release,
 )

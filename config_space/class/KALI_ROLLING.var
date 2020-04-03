@@ -1,0 +1,5 @@
+apt_cdn=http://kali.download
+security_cdn=
+release="kali-rolling"
+FAI_DEBOOTSTRAP="$release $apt_cdn/kali/"
+CLASS_BUILD="KALI_ROLLING_BUILD"
