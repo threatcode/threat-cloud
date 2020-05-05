@@ -1,1 +1,0 @@
-deb {%apt_cdn%}/kali kali-rolling main contrib non-free

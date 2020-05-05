@@ -1,3 +1,3 @@
-release="kali-rolling"
+release="kali-last-snapshot"
 FAI_DEBOOTSTRAP="$release $apt_cdn/kali/"
 CLASS_BUILD="KALI_BUILD"

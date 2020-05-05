@@ -1,2 +1,0 @@
-deb {%apt_cdn%}/kali kali-last-snapshot main contrib non-free
-deb-src {%apt_cdn%}/kali kali-last-snapshot main contrib non-free
