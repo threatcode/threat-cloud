@@ -125,6 +125,18 @@ ReleaseEnum = enum.Enum(  # type:ignore
             'fai_classes': ('KALI', 'KALI_ROLLING', ),
             'arch_supports_linux_image_cloud': ('amd64',),
         },
+        'kali-last-snapshot': {
+            'id': 'kali-last-snapshot',
+            'baseid': 'kali-last-snapshot',
+            'fai_classes': ('KALI', 'KALI_LAST_SNAPSHOT', ),
+            'arch_supports_linux_image_cloud': ('amd64',),
+        },
+        'kali-dev': {
+            'id': 'kali-dev',
+            'baseid': 'kali-dev',
+            'fai_classes': ('KALI', 'KALI_DEV', ),
+            'arch_supports_linux_image_cloud': ('amd64',),
+        },
     },
     type=Release,
 )
