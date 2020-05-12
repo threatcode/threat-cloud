@@ -13,3 +13,6 @@ echo "After:"
 cat $FAI_ROOT/etc/apt/sources.list
 
 chroot $FAI_ROOT apt-get update
+
+# Enable ssh on boot, otherwise we're stuck
+chroot $FAI_ROOT systemctl enable ssh
