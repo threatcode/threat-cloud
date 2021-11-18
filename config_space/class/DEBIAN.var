@@ -7,5 +7,6 @@ STOP_ON_ERROR=400
 TIMEZONE=UTC
 FAI_DISABLE_PACKAGE_NAME_CHECK=1
 FCOPY_NOBACKUP=1
-FAI_DEBOOTSTRAP_OPTS="--variant minbase"
+# For Kali, we want to install packages with "Priority: important"
+#FAI_DEBOOTSTRAP_OPTS="--variant minbase"
 FAI_RAMDISKS=""
