@@ -83,13 +83,13 @@ vendors:
   - matchArches: [arm64]
 - name: ec2
   fai_classes: [EC2, IPV6_DHCP]
-  size: 8
+  size: 12
   use_linux_image_cloud: true
   matches:
   - matchArches: [amd64, arm64]
 - name: gce
   fai_classes: [GCE]
-  size: 10
+  size: 12
   use_linux_image_cloud: true
   matches:
   - matchReleases: [bullseye]
