@@ -43,7 +43,7 @@ class TestEtc:
     def test_passwd_shell(self, image_passwd_entry):
         name = image_passwd_entry.name
         shell = image_passwd_entry.shell
-        if shell in ('/bin/bash', '/sbin/zsh', '/usr/sbin/zsh') and name == 'root':
+        if shell in ('/bin/bash', '/bin/zsh', '/usr/bin/zsh') and name == 'root':
             return
         if shell == '/bin/sync' and name == 'sync':
             return
