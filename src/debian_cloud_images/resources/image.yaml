@@ -55,15 +55,33 @@ releases:
   basename: kali-rolling
   id: kali-rolling
   baseid: kali-rolling
+  fai_classes: [KALI, KALI_EXTRAS, KALI_ROLLING]
+  arch_supports_linux_image_cloud: [amd64, arm64]
+- name: kali-rolling-minimal
+  basename: kali-rolling
+  id: kali-rolling
+  baseid: kali-rolling
   fai_classes: [KALI, KALI_ROLLING]
   arch_supports_linux_image_cloud: [amd64, arm64]
 - name: kali-last-snapshot
   basename: kali-last-snapshot
   id: kali-last-snapshot
   baseid: kali-last-snapshot
+  fai_classes: [KALI, KALI_EXTRAS, KALI_LAST_SNAPSHOT]
+  arch_supports_linux_image_cloud: [amd64, arm64]
+- name: kali-last-snapshot-minimal
+  basename: kali-last-snapshot
+  id: kali-last-snapshot
+  baseid: kali-last-snapshot
   fai_classes: [KALI, KALI_LAST_SNAPSHOT]
   arch_supports_linux_image_cloud: [amd64, arm64]
 - name: kali-dev
+  basename: kali-dev
+  id: kali-dev
+  baseid: kali-dev
+  fai_classes: [KALI, KALI_EXTRAS, KALI_DEV]
+  arch_supports_linux_image_cloud: [amd64, arm64]
+- name: kali-dev-minimal
   basename: kali-dev
   id: kali-dev
   baseid: kali-dev
