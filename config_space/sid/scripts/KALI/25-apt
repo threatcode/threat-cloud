@@ -4,7 +4,6 @@ echo "Before:"
 cat $FAI_ROOT/etc/apt/sources.list
 
 sed -i \
-    -e 's|repo.kali.org|kali.download|g' \
     -e 's|http://.*/kali |http://kali.download/kali |g' \
     -e 's/kali-last-snapshot/kali-rolling/g' \
     $FAI_ROOT/etc/apt/sources.list
