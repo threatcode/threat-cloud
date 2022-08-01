@@ -91,7 +91,7 @@ releases:
 vendors:
 - name: azure
   fai_classes: [AZURE, IPV6_DHCP]
-  size: 30
+  size: 40 # kali-linux-everything is 30GB (at the time of commit!)
   use_linux_image_cloud: true
   matches:
   - matchArches: [amd64]
@@ -132,12 +132,12 @@ vendors:
 types:
 - name: dev
   fai_classes: [TYPE_DEV]
-  output_name: 'debian-{release}-{vendor}-{arch}-{build_type}-{build_id}-{version}'
+  output_name: 'kali-{release}-{vendor}-{arch}-{build_type}-{build_id}-{version}'
   output_version: '{version}'
   output_version_azure: '0.0.{version!s}'
 - name: official
   fai_classes: []
-  output_name: 'debian-{release}-{vendor}-{arch}-{build_type}-{version}'
+  output_name: 'kali-{release}-{vendor}-{arch}-{build_type}-{version}'
   output_version: '{date}-{version}'
   output_version_azure: '0.{date!s}.{version!s}'
 
