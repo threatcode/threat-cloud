@@ -115,10 +115,10 @@ vendors:
   - matchArches: [amd64]
 - name: generic
   fai_classes: [GENERIC]
-  size: 2
+  size: 12
 - name: genericcloud
   fai_classes: [GENERIC]
-  size: 2
+  size: 12
   use_linux_image_cloud: true
   matches:
   - matchReleases: [buster]
@@ -127,7 +127,7 @@ vendors:
   - matchArches: [amd64, arm64]
 - name: nocloud
   fai_classes: [NOCLOUD]
-  size: 2
+  size: 12
 
 types:
 - name: dev
