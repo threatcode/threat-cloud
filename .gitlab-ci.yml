@@ -4,7 +4,7 @@ stages:
   - build
 
 variables:
-  CLOUD_IMAGE_BUILD_ID: ${CI_PROJECT_NAMESPACE}-${CI_COMMIT_REF_SLUG}
+  CLOUD_IMAGE_BUILD_ID: ${CI_PROJECT_NAME}-${CI_COMMIT_REF_SLUG}
   GIT_DEPTH: "1"
 
 workflow:
