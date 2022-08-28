@@ -14,6 +14,8 @@ class TestVar:
             'lastlog',
             'runit',
             'unattended-upgrades',
+            'README',
+            'private',
             'wtmp',
             # From kali-linux-headless
             'apache2',
