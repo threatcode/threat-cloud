@@ -13,3 +13,35 @@ hyperv-daemons/buster-backports
 PACKAGES install-norec BULLSEYE
 # Azure needs cloud-init >= 22.1
 cloud-init/bullseye-backports
+
+PACKAGES install-norec KALI
+# When "Enable OS guest diagnostics", the following happens:
+# > The handler for VM extension type 'Microsoft.Azure.Diagnostics.LinuxDiagnostic' has reported terminal failure for VM extension 'LinuxDiagnostic' with error message: '[ExtensionOperationError] Non-zero exit code: 127, /var/lib/waagent/Microsoft.Azure.Diagnostics.LinuxDiagnostic-3.0.141/diagnostic.py -install
+# > [stdout]
+# >
+# >
+# > [stderr]
+# > /usr/bin/env: ‘python’: No such file or directory'.
+#
+# $ sudo python3 /var/lib/waagent/Microsoft.Azure.Diagnostics.LinuxDiagnostic-3.0.141/diagnostic.py -install
+# File "/var/lib/waagent/Microsoft.Azure.Diagnostics.LinuxDiagnostic-3.0.141/diagnostic.py", line 54
+#   print 'A local import (e.g., waagent) failed. Exception: {0}\n' \
+#   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+# SyntaxError: Missing parentheses in call to 'print'. Did you mean print(...)?
+#
+# REF: https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/diagnostics-linux?tabs=azcli
+python2
+#
+# $ sudo  /var/lib/waagent/Microsoft.Azure.Diagnostics.LinuxDiagnostic-3.0.141/diagnostic.py --help
+# A local import (e.g., waagent) failed. Exception: No module named pkg_resources
+# Stacktrace: Traceback (most recent call last):
+#  File "/var/lib/waagent/Microsoft.Azure.Diagnostics.LinuxDiagnostic-3.0.141/diagnostic.py", line 38, in <module>
+#    from Utils.WAAgentUtil import waagent
+#  File "/var/lib/waagent/Microsoft.Azure.Diagnostics.LinuxDiagnostic-3.0.141/Utils/WAAgentUtil.py", line 48, in <module>
+#    waagent = imp.load_source('waagent', agentPath)
+#  File "/usr/sbin/waagent", line 15, in <module>
+#    from pkg_resources import load_entry_point
+# ImportError: No module named pkg_resources
+#
+# Can't proceed. Exiting with a special exit code 119.
+python-pkg-resources
