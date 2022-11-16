@@ -5,9 +5,7 @@ set -euE
 
 ## Linux diagnostic extension v3.0 & v4.0 require python2
 ## REF: https://docs.microsoft.com/en-us/azure/virtual-machines/extensions/diagnostics-linux?tabs=azcli
-if [ -e $target/usr/bin/python ]; then
-  #chroot $FAI_ROOT update-alternatives --remove-all python
-  $ROOTCMD update-alternatives --remove-all python
-fi
+#chroot $FAI_ROOT update-alternatives --remove-all python || :
+$ROOTCMD update-alternatives --remove-all python || :
 #chroot $FAI_ROOT update-alternatives --install /usr/bin/python python /usr/bin/python2 1
 $ROOTCMD update-alternatives --install /usr/bin/python python /usr/bin/python2 1
