@@ -45,7 +45,7 @@ class TestEtc:
             'cntlm', 'Debian-exim', 'debian-tor', 'freerad', 'freerad-wpe',
             'gpsd', 'redis',
             # From kali-desktop-core
-            'rtkit', 'speech-dispatcher',
+            'polkitd', 'rtkit', 'speech-dispatcher',
             # From kali-desktop-xfce
             '_chrony', 'avahi', 'colord', 'dnsmasq', 'lightdm',
             'nm-openconnect', 'nm-openvpn', 'pulse',  'saned',
